@@ -1,0 +1,254 @@
+[
+  {
+    "solver": "Raw PnP",
+    "metric": "coverage_pct",
+    "value": 68.66898148148148,
+    "paper_value": 68.67,
+    "passed": true
+  },
+  {
+    "solver": "Raw PnP",
+    "metric": "median_m",
+    "value": 40.9249601332689,
+    "paper_value": 40.92,
+    "passed": true
+  },
+  {
+    "solver": "Raw PnP",
+    "metric": "rmse_m",
+    "value": 99.23152845206907,
+    "paper_value": 99.23,
+    "passed": true
+  },
+  {
+    "solver": "Raw PnP",
+    "metric": "p95_m",
+    "value": 139.75111829168446,
+    "paper_value": 139.75,
+    "passed": true
+  },
+  {
+    "solver": "Raw PnP",
+    "metric": "sr5_pct",
+    "value": 4.247685185185185,
+    "paper_value": 4.25,
+    "passed": true
+  },
+  {
+    "solver": "Raw PnP",
+    "metric": "f30_pct",
+    "value": 68.83101851851852,
+    "paper_value": 68.83,
+    "passed": true
+  },
+  {
+    "solver": "MAGSAC++",
+    "metric": "coverage_pct",
+    "value": 95.17361111111111,
+    "paper_value": 95.17,
+    "passed": true
+  },
+  {
+    "solver": "MAGSAC++",
+    "metric": "median_m",
+    "value": 28.550008569341976,
+    "paper_value": 28.55,
+    "passed": true
+  },
+  {
+    "solver": "MAGSAC++",
+    "metric": "rmse_m",
+    "value": 69.66643280939283,
+    "paper_value": 69.67,
+    "passed": true
+  },
+  {
+    "solver": "MAGSAC++",
+    "metric": "p95_m",
+    "value": 120.4804251990405,
+    "paper_value": 120.48,
+    "passed": true
+  },
+  {
+    "solver": "MAGSAC++",
+    "metric": "sr5_pct",
+    "value": 19.74537037037037,
+    "paper_value": 19.75,
+    "passed": true
+  },
+  {
+    "solver": "MAGSAC++",
+    "metric": "f30_pct",
+    "value": 43.62847222222222,
+    "paper_value": 43.63,
+    "passed": true
+  },
+  {
+    "solver": "CLNet (frozen)",
+    "metric": "coverage_pct",
+    "value": 95.17361111111111,
+    "paper_value": 95.17,
+    "passed": true
+  },
+  {
+    "solver": "CLNet (frozen)",
+    "metric": "median_m",
+    "value": 36.797353120339764,
+    "paper_value": 36.8,
+    "passed": true
+  },
+  {
+    "solver": "CLNet (frozen)",
+    "metric": "rmse_m",
+    "value": 71.84059473589323,
+    "paper_value": 71.84,
+    "passed": true
+  },
+  {
+    "solver": "CLNet (frozen)",
+    "metric": "p95_m",
+    "value": 121.71266305614273,
+    "paper_value": 121.71,
+    "passed": true
+  },
+  {
+    "solver": "CLNet (frozen)",
+    "metric": "sr5_pct",
+    "value": 3.4953703703703702,
+    "paper_value": 3.5,
+    "passed": true
+  },
+  {
+    "solver": "CLNet (frozen)",
+    "metric": "f30_pct",
+    "value": 56.030092592592595,
+    "paper_value": 56.03,
+    "passed": true
+  },
+  {
+    "solver": "OANet (frozen)",
+    "metric": "coverage_pct",
+    "value": 95.17361111111111,
+    "paper_value": 95.17,
+    "passed": true
+  },
+  {
+    "solver": "OANet (frozen)",
+    "metric": "median_m",
+    "value": 35.497749512248454,
+    "paper_value": 35.5,
+    "passed": true
+  },
+  {
+    "solver": "OANet (frozen)",
+    "metric": "rmse_m",
+    "value": 71.66702134379868,
+    "paper_value": 71.67,
+    "passed": true
+  },
+  {
+    "solver": "OANet (frozen)",
+    "metric": "p95_m",
+    "value": 122.04978454978274,
+    "paper_value": 122.05,
+    "passed": true
+  },
+  {
+    "solver": "OANet (frozen)",
+    "metric": "sr5_pct",
+    "value": 4.1782407407407405,
+    "paper_value": 4.18,
+    "passed": true
+  },
+  {
+    "solver": "OANet (frozen)",
+    "metric": "f30_pct",
+    "value": 52.476851851851855,
+    "paper_value": 52.48,
+    "passed": true
+  },
+  {
+    "solver": "MHGC",
+    "metric": "coverage_pct",
+    "value": 95.17361111111111,
+    "paper_value": 95.17,
+    "passed": true
+  },
+  {
+    "solver": "MHGC",
+    "metric": "median_m",
+    "value": 21.990096773186544,
+    "paper_value": 21.99,
+    "passed": true
+  },
+  {
+    "solver": "MHGC",
+    "metric": "rmse_m",
+    "value": 48.26052469185354,
+    "paper_value": 48.26,
+    "passed": true
+  },
+  {
+    "solver": "MHGC",
+    "metric": "p95_m",
+    "value": 83.85103969506123,
+    "paper_value": 83.85,
+    "passed": true
+  },
+  {
+    "solver": "MHGC",
+    "metric": "sr5_pct",
+    "value": 19.88425925925926,
+    "paper_value": 19.88,
+    "passed": true
+  },
+  {
+    "solver": "MHGC",
+    "metric": "f30_pct",
+    "value": 39.17824074074074,
+    "paper_value": 39.18,
+    "passed": true
+  },
+  {
+    "solver": "CMCGC",
+    "metric": "coverage_pct",
+    "value": 95.17361111111111,
+    "paper_value": 95.17,
+    "passed": true
+  },
+  {
+    "solver": "CMCGC",
+    "metric": "median_m",
+    "value": 21.747676735475622,
+    "paper_value": 21.75,
+    "passed": true
+  },
+  {
+    "solver": "CMCGC",
+    "metric": "rmse_m",
+    "value": 48.18490282336892,
+    "paper_value": 48.18,
+    "passed": true
+  },
+  {
+    "solver": "CMCGC",
+    "metric": "p95_m",
+    "value": 83.75180646612775,
+    "paper_value": 83.75,
+    "passed": true
+  },
+  {
+    "solver": "CMCGC",
+    "metric": "sr5_pct",
+    "value": 21.16898148148148,
+    "paper_value": 21.17,
+    "passed": true
+  },
+  {
+    "solver": "CMCGC",
+    "metric": "f30_pct",
+    "value": 38.99305555555556,
+    "paper_value": 38.99,
+    "passed": true
+  }
+]
