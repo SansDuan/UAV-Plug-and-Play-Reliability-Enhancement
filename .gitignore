@@ -3,7 +3,13 @@ __pycache__/
 *.pt
 *.pth
 *.ckpt
+*.safetensors
+*.onnx
 *.tar
 *.zst
 checkpoints/
+weights/
 work/
+# Temporarily excluded from the public release
+code/
+requirements.txt

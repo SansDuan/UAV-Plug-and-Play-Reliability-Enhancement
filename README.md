@@ -1,26 +1,20 @@
 # UAV Plug-and-Play Reliability Enhancement
 
-AnyVisLoc matching data, data-generation utilities, and evaluation results for
-*A Plug-and-Play Lightweight Reliability Enhancement Network for Zero-Shot
-Generalization in Scene-Matching Visual Navigation*.
+Public data and evaluation results for *A Plug-and-Play Lightweight Reliability Enhancement Network for Zero-Shot Generalization in Scene-Matching Visual Navigation*.
+
+**Release status:** Matching data and evaluation results are available. Source code, reproduction scripts, and model weights are temporarily withheld from the public release.
 
 ## Dataset
 
 [Download the matching data from Google Drive](https://drive.google.com/file/d/1qs_mPLWHgElHm9K3kmRLrSdgrP_U2HzR/view?usp=sharing)
 
-The matching archive provides precomputed UAV-to-reference correspondences.
-Frame directories use identifiers such as `Scene_21_L21_0001_aerial`; NPZ files
-use matcher names as filenames. `data/methods.txt` lists the 50 point-matching
-methods used for point-correspondence processing.
+The matching archive contains precomputed UAV-to-reference correspondences. Frame directories use identifiers such as `Scene_21_L21_0001_aerial`, and NPZ files are named after the matching method. See [data/methods.txt](data/methods.txt) for the 50 point-matching methods used for correspondence processing.
 
-Reference crops are selected around the ground-truth location and pre-rotated
-using camera heading. The evaluation studies correspondence reliability and
-geometric localization within these local reference regions.
+Reference crops are selected around the ground-truth location and pre-rotated using camera heading. Evaluation examines correspondence reliability and geometric localization within these local reference regions.
 
-## AnyVisLoc Results
+## AnyVisLoc Evaluation Results
 
-The evaluation uses Scenes 21-24, with 1,728 shared frames and ten target
-matchers, totaling 17,280 matcher-frame instances.
+The evaluation uses Scenes 21–24, with 1,728 shared frames and ten target matchers, totaling 17,280 matcher-frame instances.
 
 | Method | Coverage (%) | Median (m) | RMSE (m) | P95 (m) | SR@5 (%) | F30 (%) |
 |---|---:|---:|---:|---:|---:|---:|
@@ -31,45 +25,10 @@ matchers, totaling 17,280 matcher-frame instances.
 | MHGC | 95.17 | 21.99 | 48.26 | 83.85 | 19.88 | 39.18 |
 | CMCGC | 95.17 | 21.75 | 48.18 | 83.75 | 21.17 | 38.99 |
 
-Saved query-level errors are in `tables/query_errors/`. Recompute the table and
-check its values using Python 3.10+:
+Saved query-level errors are in [tables/query_errors](tables/query_errors). Aggregate numbers and verification metadata are in [tables/main_table_verified.csv](tables/main_table_verified.csv) and [tables/paper_value_checks.json](tables/paper_value_checks.json).
 
-```bash
-python3 code/reproduce_main_table.py
-python3 code/test_release.py
-```
+Median, RMSE, and P95 are computed over valid outputs per matcher and then macro-averaged. Coverage, SR@5, and F30 account for all queries. Nonfinite outputs and errors >= 9999 are treated as invalid.
 
-Median, RMSE and P95 are computed over valid outputs per matcher and then
-macro-averaged. Coverage, SR@5 and F30 account for every query. The saved-error
-convention treats nonfinite values and errors >= 9999 as invalid outputs.
+## Code and Model Weights
 
-## Data Generation
-
-Install the preprocessing and matching dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
-Prepare UAV/reference pairs with heading pre-rotation and DSM crops:
-
-```bash
-python3 code/preprocessing/anyvisloc_precrop_scene.py \
-  --zip /path/to/AnyVisLoc/Scene_21.zip \
-  --out-root /path/to/pairs --mode aerial
-```
-
-The matcher worker uses IMCUI and local upstream checkpoints. A pair CSV has the
-columns `run_name,image0,image1,out`; use absolute paths for images and output
-directories. Run a matcher with:
-
-```bash
-python3 code/matching/run_matching.py \
-  --method sift --pairs-csv pairs.csv \
-  --checkpoints /path/to/checkpoints --resume
-```
-
-The worker reuses one model across the listed pairs, saves correspondences as
-NPZ files, and uses CUDA when available. The launcher sets CPU thread counts to
-one. Matcher-specific upstream dependencies and checkpoints follow their
-respective projects' installation instructions.
+Source code, preprocessing and matching utilities, reproduction scripts, and model checkpoints are **not part of the current public release**. This repository currently provides data and reported evaluation results only.
