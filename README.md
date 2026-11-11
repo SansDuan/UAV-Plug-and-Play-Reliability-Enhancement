@@ -28,7 +28,3 @@ The evaluation uses Scenes 21–24, with 1,728 shared frames and ten target matc
 Saved query-level errors are in [tables/query_errors](tables/query_errors). Aggregate numbers and verification metadata are in [tables/main_table_verified.csv](tables/main_table_verified.csv) and [tables/paper_value_checks.json](tables/paper_value_checks.json).
 
 Median, RMSE, and P95 are computed over valid outputs per matcher and then macro-averaged. Coverage, SR@5, and F30 account for all queries. Nonfinite outputs and errors >= 9999 are treated as invalid.
-
-## Code and Model Weights
-
-Source code, preprocessing and matching utilities, reproduction scripts, and model checkpoints are **not part of the current public release**. This repository currently provides data and reported evaluation results only.
